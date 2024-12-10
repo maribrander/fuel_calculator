@@ -5,7 +5,7 @@
     android:id="@+id/step1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".step1">
+    tools:context=".Step1">
 
     <TextView
         android:id="@+id/text_title"
