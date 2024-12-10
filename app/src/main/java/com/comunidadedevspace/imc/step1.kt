@@ -5,10 +5,11 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputEditText
 
 const val KEY_STEP1_FUEL = "Step1.KEY_STEP1"
 
-class step1 : AppCompatActivity() {
+class Step1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_step1)
@@ -17,9 +18,11 @@ class step1 : AppCompatActivity() {
 
         val btnNext1 = findViewById<Button>(R.id.button_next1)
         btnNext1.setOnClickListener {
-            val intent = Intent (this, step2::class.java)
+            val intent = Intent (this, Step2::class.java)
             intent.putExtra(KEY_STEP2_FUEL,0)
             startActivity(intent)
          }
+
+        val theprice = findViewById<TextInputEditText>(R.id.edtPrice)
     }
 }
